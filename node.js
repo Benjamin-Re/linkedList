@@ -1,7 +1,8 @@
-const node = (value, next) => {
+const node = (value, next, prev) => {
     return {
         value : value,
-        next : next
+        next : next,
+        prev: prev,
     }
 }
 
