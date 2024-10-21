@@ -32,6 +32,7 @@ const linkedList = () => {
             temp = temp.next;
             console.log(temp.value);
         }
+        console.log("--------------")
     }
 
     const size = () => {
@@ -75,6 +76,14 @@ const linkedList = () => {
         return temp;
     }
 
+    const pop = () => {
+        let temp = head
+        while(temp.next !== null) {
+            temp = temp.next;
+        }
+        temp.prev.next = null;
+    }
+
     return {
         head: head,
         append: append,
@@ -84,6 +93,7 @@ const linkedList = () => {
         first: first,
         tail: tail,
         at: at,
+        pop: pop,
     }
 
 }
